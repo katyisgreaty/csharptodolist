@@ -24,7 +24,7 @@ namespace ToDoList
       };
       Post["/tasks"] = _ => {
         Task newTask = new Task(Request.Form["new-task"]);
-        List<task> allTasks = Task.GetAll();
+        List<Task> allTasks = Task.GetAll();
         return View["tasks.cshtml", allTasks];
       };
     }
